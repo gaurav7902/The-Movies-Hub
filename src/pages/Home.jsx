@@ -6,9 +6,33 @@ function Home() {
   const [searchQuery, setSearchQuery] = useState("")
 
   const movies = [
-    { id: 1, title: "Inception", genre: "Sci-Fi", year: 2010 },
-    { id: 2, title: "The Godfather", genre: "Crime", year: 1972 },
-    { id: 3, title: "The Dark Knight", genre: "Action", year: 2008 },
+    {
+      id: 1,
+      title: "Inception",
+      name: "Inception",
+      genre: "Sci-Fi",
+      year: 2010,
+      url: "https://via.placeholder.com/300x450?text=Inception",
+      release_date: "2010-07-16",
+    },
+    {
+      id: 2,
+      title: "The Godfather",
+      name: "The Godfather",
+      genre: "Crime",
+      year: 1972,
+      url: "https://via.placeholder.com/300x450?text=The+Godfather",
+      release_date: "1972-03-24",
+    },
+    {
+      id: 3,
+      title: "The Dark Knight",
+      name: "The Dark Knight",
+      genre: "Action",
+      year: 2008,
+      url: "https://via.placeholder.com/300x450?text=The+Dark+Knight",
+      release_date: "2008-07-18",
+    },
   ]
 
   function handleSearch(event) {

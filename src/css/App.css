@@ -1,4 +1,17 @@
-.main-content {
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #242424;
+}
+
+.nav {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.content {
   flex: 1;
   padding: 2rem;
   box-sizing: border-box;
