@@ -7,7 +7,7 @@ import { MovieProvider } from "./context/MovieContext";
 
 function App() {
     return (
-        <MovieProvider className="app">
+        <MovieProvider>
             <NavBar className="nav" />
             <main className="content">
                 <Routes>

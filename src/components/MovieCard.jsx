@@ -37,7 +37,11 @@ function MovieCard({ movie }) {
             </div>
             <div className="movie-info">
                 <h3 className="movie-title">{movie.title || movie.name}</h3>
-                <p>{movie.release_date.split("-")[0]}</p>
+                <p>
+                    {movie.release_date
+                        ? movie.release_date.split("-")[0]
+                        : "N/A"}
+                </p>
             </div>
         </div>
     );

@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
-import { MovieContext } from "./MovieContext";
+import { useState, useEffect, createContext } from "react";
+
+export const MovieContext = createContext();
 
 export const MovieProvider = ({ children }) => {
     const [favoriteMovies, setFavoriteMovies] = useState(() => {
@@ -12,7 +13,12 @@ export const MovieProvider = ({ children }) => {
     }, [favoriteMovies]);
 
     const addFavoriteMovie = (movie) => {
-        setFavoriteMovies((prevFavorites) => [...prevFavorites, movie]);
+        setFavoriteMovies((prevFavorites) => {
+            if (prevFavorites.some((m) => m.id === movie.id)) {
+                return prevFavorites;
+            }
+            return [...prevFavorites, movie];
+        });
     };
 
     const removeFavoriteMovie = (movieId) => {
