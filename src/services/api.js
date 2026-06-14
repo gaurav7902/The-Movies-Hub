@@ -31,4 +31,4 @@ export const getPopularMovies = async () => {
         console.error("Error fetching popular movies:", error);
         return [];
     }
-};
+}; 
