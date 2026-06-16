@@ -1,5 +1,7 @@
 # The Movies Hub 🎬
 
+Deployed at: [The-Movies-Hub](https://the-movies-hub.vercel.app/)
+
 A modern movie search and discovery application built with React and Vite. The Movies Hub allows users to explore popular films and keep track of their favorite movies.
 
 ## 🌟 Features
