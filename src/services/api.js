@@ -1,10 +1,10 @@
 const apiKey = import.meta.env.VITE_TMDB_API_KEY;
-const baseUrl = "https://api.themoviedb.org/3";
+const baseUrl = 'https://api.themoviedb.org/3';
 
 export const searchMovies = async (query) => {
     try {
         const response = await fetch(
-            `${baseUrl}/search/movie?api_key=${apiKey}&query=${encodeURIComponent(query)}`
+            `${baseUrl}/search/movie?api_key=${apiKey}&query=${encodeURIComponent(query)}`,
         );
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -12,7 +12,7 @@ export const searchMovies = async (query) => {
         const data = await response.json();
         return data.results;
     } catch (error) {
-        console.error("Error searching movies:", error);
+        console.error('Error searching movies:', error);
         return [];
     }
 };
@@ -20,7 +20,7 @@ export const searchMovies = async (query) => {
 export const getPopularMovies = async () => {
     try {
         const response = await fetch(
-            `${baseUrl}/movie/popular?api_key=${apiKey}`
+            `${baseUrl}/movie/popular?api_key=${apiKey}`,
         );
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -28,7 +28,7 @@ export const getPopularMovies = async () => {
         const data = await response.json();
         return data.results;
     } catch (error) {
-        console.error("Error fetching popular movies:", error);
+        console.error('Error fetching popular movies:', error);
         return [];
     }
-}; 
+};

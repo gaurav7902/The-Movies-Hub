@@ -1,15 +1,15 @@
-import { useState, useEffect, createContext } from "react";
+import {useState, useEffect, createContext} from 'react';
 
 export const MovieContext = createContext();
 
-export const MovieProvider = ({ children }) => {
+export const MovieProvider = ({children}) => {
     const [favoriteMovies, setFavoriteMovies] = useState(() => {
-        const storedFavorites = localStorage.getItem("favoriteMovies");
+        const storedFavorites = localStorage.getItem('favoriteMovies');
         return storedFavorites ? JSON.parse(storedFavorites) : [];
     });
 
     useEffect(() => {
-        localStorage.setItem("favoriteMovies", JSON.stringify(favoriteMovies));
+        localStorage.setItem('favoriteMovies', JSON.stringify(favoriteMovies));
     }, [favoriteMovies]);
 
     const addFavoriteMovie = (movie) => {
@@ -23,7 +23,7 @@ export const MovieProvider = ({ children }) => {
 
     const removeFavoriteMovie = (movieId) => {
         setFavoriteMovies((prevFavorites) =>
-            prevFavorites.filter((movie) => movie.id !== movieId)
+            prevFavorites.filter((movie) => movie.id !== movieId),
         );
     };
 
@@ -41,4 +41,4 @@ export const MovieProvider = ({ children }) => {
     return (
         <MovieContext.Provider value={value}>{children}</MovieContext.Provider>
     );
-}; 
+};

@@ -1,17 +1,17 @@
-import "../css/NavBar.css";
-import { Link } from "react-router-dom";
+import '../css/NavBar.css';
+import {Link} from 'react-router-dom';
 
 function NavBar() {
     return (
-        <nav className="navbar">
-            <div className="navbar-brand">
-                <Link to="/">The Movies Hub</Link>
+        <nav className='navbar'>
+            <div className='navbar-brand'>
+                <Link to='/'>The Movies Hub</Link>
             </div>
-            <div className="navbar-links">
-                <Link to="/" className="nav-link">
+            <div className='navbar-links'>
+                <Link to='/' className='nav-link'>
                     Home
                 </Link>
-                <Link to="/favorites" className="nav-link">
+                <Link to='/favorites' className='nav-link'>
                     Favorites
                 </Link>
             </div>
@@ -19,4 +19,4 @@ function NavBar() {
     );
 }
 
-export default NavBar; 
+export default NavBar;
